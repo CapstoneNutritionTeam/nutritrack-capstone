@@ -1,3 +1,4 @@
+(Don't touch the commits or Pull requests until we all agree to add it)
 # How Feature Development Will Work (Team Guidelines)
 
 ## Risk of Merge Conflicts
