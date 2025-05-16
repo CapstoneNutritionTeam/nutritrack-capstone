@@ -39,9 +39,8 @@ Members:
 - May help configure security settings, logging, or error handling.
 
 Members:
-- ______
+- 
 
----
 
 ----------------------------------------------------------------
 # Git Branch Workflow and Collaboration Process
