@@ -40,7 +40,4 @@ This project follows a structured branching model to ensure high-quality code an
 - This process enforces code review and collaboration standards.
 - Branch protection rules are enabled to enforce these PR requirements.
 
----
-
-## Summary Diagram (Example)
 
