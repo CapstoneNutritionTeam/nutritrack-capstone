@@ -18,7 +18,7 @@ This project follows a structured branching model to ensure high-quality code an
 ## Workflow Hierarchy
 
 1. **Documentation**:  
-  Github has a feature called 'Wiki' which you'll see as one of the options everytime you desing something and want to prove documentation for grade or keeping track of changes add it there.
+  GitHub has a feature called 'Wiki,' which you’ll see as one of the options whenever you design something and want to provide documentation for grading or to keep track of changes—just add it there.
 
 3. **Features**:  
    After documentation is reviewed and approved, new feature branches are created from the `features` branch. Features are developed and tested here. (Add the raw new code here!)
