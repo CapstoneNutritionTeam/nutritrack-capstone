@@ -1,3 +1,4 @@
+(Don't touch the commits or Pull requests until we all agree to add it)
 # Git Branch Workflow and Collaboration Process
 
 This project follows a structured branching model to ensure high-quality code and smooth collaboration among team members.
