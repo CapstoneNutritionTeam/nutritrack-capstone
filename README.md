@@ -20,8 +20,7 @@ To keep things organized, we’re assigning responsibilities based on each team 
 
 Members:
 - Andres (AJprogramming123)
-- _____
-
+-
 ---
 
 ### Frontend Developer (HTML + CSS + Jinja2 Templates)
@@ -29,8 +28,8 @@ Members:
 - Example files: `templates/`, `static/`, `base.html`, `index.html`
 
 Members:
-- _____
-- _____
+- 
+- 
 
 ---
 
