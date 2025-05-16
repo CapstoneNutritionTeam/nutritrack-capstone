@@ -9,3 +9,5 @@ if __name__ == '__main__':
     app.run(debug=True)
 
 #Testing for productivity
+
+#IF only this changed then the .gititignore works fine now
