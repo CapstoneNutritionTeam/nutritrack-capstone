@@ -1,4 +1,47 @@
-(Don't touch the commits or Pull requests until we all agree to add it)
+# How Feature Development Will Work (Team Guidelines)
+
+## Risk of Merge Conflicts
+If two people edit the same file and commit around the same time, you risk merge conflicts — which can break our codebase or overwrite each other's work.
+
+### To Avoid This:
+- Communicate in the group chat before you start working.
+- Announce which file you're editing.
+- Never assume no one else is touching it.
+
+---
+
+## Role Assignments
+
+To keep things organized, we’re assigning responsibilities based on each team member’s strengths. This helps avoid file collisions.
+
+### Backend Developer (Flask + Database + API)
+- Responsible for server logic, routing, database models, and external API logic.
+- Example files: `app.py`, `models.py`, `api_utils.py`
+
+Members:
+- Andres (AJprogramming123)
+- s
+---
+
+### Frontend Developer (HTML + CSS + Jinja2 Templates)
+- Handles page layout, styling, and user-facing Jinja2 templates.
+- Example files: `templates/`, `static/`, `base.html`, `index.html`
+
+Members:
+- s
+- s
+
+---
+
+### Bug Checker / Security Analyst
+- Reviews code for issues, vulnerabilities, and handles early bug testing.
+- May help configure security settings, logging, or error handling.
+
+Members:
+-s
+
+---
+
 # Git Branch Workflow and Collaboration Process
 
 This project follows a structured branching model to ensure high-quality code and smooth collaboration among team members.
@@ -21,7 +64,7 @@ This project follows a structured branching model to ensure high-quality code an
    All changes must start with updating or verifying relevant documentation in the `documentation` branch. This ensures clarity on what is being changed or added.
 
 2. **Features**:  
-   After documentation is reviewed and approved, new feature branches are created from the `features` branch. Features are developed and tested here.
+   After documentation is reviewed and approved, new feature branches are created from the `features` branch. Features are developed and tested here. (Add the raw new code here!)
 
 3. **Bugfixes**:  
    Once a feature is ready, it is merged into the `bugfixes` branch for thorough bug fixing and validation.
