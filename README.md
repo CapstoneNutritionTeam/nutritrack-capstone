@@ -20,7 +20,7 @@ This project follows a structured branching model to ensure high-quality code an
    All changes must start with updating or verifying relevant documentation in the `documentation` branch. This ensures clarity on what is being changed or added.
 
 2. **Features**:  
-   After documentation is reviewed and approved, new feature branches are created from the `features` branch. Features are developed and tested here.
+   After documentation is reviewed and approved, new feature branches are created from the `features` branch. Features are developed and tested here. (Add the raw new code here!)
 
 3. **Bugfixes**:  
    Once a feature is ready, it is merged into the `bugfixes` branch for thorough bug fixing and validation.
