@@ -18,18 +18,18 @@ This project follows a structured branching model to ensure high-quality code an
 ## Workflow Hierarchy
 
 1. **Documentation**:  
-   All changes must start with updating or verifying relevant documentation in the `documentation` branch. This ensures clarity on what is being changed or added.
+  Github has a feature called 'Wiki' which you'll see as one of the options everytime you desing something and want to prove documentation for grade or keeping track of changes add it there.
 
-2. **Features**:  
+3. **Features**:  
    After documentation is reviewed and approved, new feature branches are created from the `features` branch. Features are developed and tested here. (Add the raw new code here!)
 
-3. **Bugfixes**:  
+4. **Bugfixes**:  
    Once a feature is ready, it is merged into the `bugfixes` branch for thorough bug fixing and validation.
 
-4. **Dev**:  
+5. **Dev**:  
    After passing all bug fixes and quality checks, changes from `bugfixes` are merged into `dev` for final integration and team testing.
 
-5. **Main**:  
+6. **Main**:  
    When `dev` is stable and tested, it is merged into `main` for production deployment.
 
 ---
