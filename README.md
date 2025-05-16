@@ -1,4 +1,3 @@
-(Don't touch the commits or Pull requests until we all agree to add it)
 # How Feature Development Will Work (Team Guidelines)
 
 ## Risk of Merge Conflicts
@@ -21,7 +20,7 @@ To keep things organized, we’re assigning responsibilities based on each team 
 
 Members:
 - Andres (AJprogramming123)
--
+- s
 ---
 
 ### Frontend Developer (HTML + CSS + Jinja2 Templates)
@@ -29,8 +28,8 @@ Members:
 - Example files: `templates/`, `static/`, `base.html`, `index.html`
 
 Members:
-- 
-- 
+- s
+- s
 
 ---
 
@@ -39,10 +38,10 @@ Members:
 - May help configure security settings, logging, or error handling.
 
 Members:
-- 
+-s
 
+---
 
-----------------------------------------------------------------
 # Git Branch Workflow and Collaboration Process
 
 This project follows a structured branching model to ensure high-quality code and smooth collaboration among team members.
