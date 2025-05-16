@@ -1,3 +1,4 @@
+Summarized process: (features -> bugfixes -> dev -> FINAL STAGE: main -> upload using Render.com) 
 # Git Branch Workflow and Collaboration Process
 
 This project follows a structured branching model to ensure high-quality code and smooth collaboration among team members.
