@@ -1,4 +1,4 @@
 .github/CODEOWNERS
 .gitignore @AJprogramming123
 .github/CODEOWNERS @AJprogramming123
-.env AJprogramming123
+.env @AJprogramming123
