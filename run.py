@@ -16,7 +16,7 @@ if __name__ == '__main__':
 #3.) <git checkout -b editor/AJprogramming123> -> <git pull origin features/[branch]> <- (Creates your own branch)
 #4.) "Start making the changes"
 #5.) <git add run.py> -> <git commit -m  "Resolve merge conflict"
-#6.) <git push origin editor/AJ123> <- this is my personal branch where i make my changes to then send to get pull request to merge with approval)
+#6.) <git push origin editor/AJprogramming123> <- this is my personal branch where i make my changes to then send to get pull request to merge with approval)
 
 
 #Basically the most we have to worry about is that when you open a Pull Request and GitHub checks:
