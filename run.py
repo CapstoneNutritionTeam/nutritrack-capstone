@@ -3,17 +3,18 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Hello, World!"
+    return "WHO LET THE DOGS OUT"
 
 if __name__ == '__main__':
     app.run(debug=True)
 
-#Testing for productivity
 
-#IF only this changed then the .gititignore works fine now after you clone you need to do something specific on your command line:
-#1.) go into the VENV environment always before installing python packages to not conflict your local system
-#2.) Before adding/committing any new updates do this (Only need to this once unless you use a new device or clone again):
-    # touch .env
-    # (write something on it to test if it commits)
-    # git rm --cached .env
-    # git commit -m "Stop tracking .env file"
+
+#Once you are ready to make yoour first changes--
+#1.) <cd ~/Desktop/nutritrack-capstone> -> <git fetch origin>
+#2.) <git checkout features> -> <git pull origin features> <git checkout -b editor/AJprogramming123>
+#3.) "Start making the changes"
+#4.) <git add .> -> <git commit -m "COMMENT">
+#5.) "You want to make sure youre up to date" -> <git pull origin features>
+#6.) <git add run.py> -> <git commit -m  "Resolve merge conflict"
+#7.) <git push origin editor/AJ123
