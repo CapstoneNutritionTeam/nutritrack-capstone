@@ -11,3 +11,4 @@ def create_app():
     app.register_blueprint(calc_bp, url_prefix='/information')
 
     return app #Now we set :)
+    
