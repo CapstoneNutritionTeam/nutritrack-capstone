@@ -13,7 +13,7 @@ if __name__ == '__main__':
 #Once you are ready to make yoour first changes--
 #1.) <source venv/bin/activate> -> ssh git@github.com>
 #2.) <cd ~/Desktop/nutritrack-capstone>
-#3.) <git checkout -b editor/AJprogramming123> -> <git pull origin features/[branch]> <- (Creates your own branch)
+#3.) <git checkout -b editor/AJprogramming123> -> <git pull origin features> <- (Creates your own branch)
 #4.) "Start making the changes"
 #5.) <git add run.py> -> <git commit -m  "Resolve merge conflict"
 #6.) <git push origin editor/AJprogramming123> <- this is my personal branch where i make my changes to then send to get pull request to merge with approval)
@@ -34,3 +34,5 @@ if __name__ == '__main__':
 
 
 #Eventually we will have all branches open for changes so youd use: <git add .> or <git pull origin> instead of specific files or branches
+
+#sdafdadasd
