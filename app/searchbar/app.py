@@ -11,8 +11,9 @@ def search_form():
         return redirect(url_for('search.search_item', item=item))
     return render_template('search_form.html')
 
+
 @search_bp.route('/<item>', methods=['GET'])
-def search_item(item):
+def API():
     api_key = os.getenv("API_KEY")
     app_id = os.getenv("APP_ID")
     url = "https://trackapi.nutritionix.com/v2/search/instant"
@@ -20,6 +21,9 @@ def search_item(item):
         "x-app-id": app_id,
         "x-app-key": api_key
     }
+
+def search_item(item):
+    API()
     params = {"query": item}
     response = requests.get(url, headers=headers, params=params)
     if response.ok:
