@@ -1,0 +1,16 @@
+{
+  "name": "Capstone Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "extensions": [
+    "ms-python.python",
+    "github.vscode-pull-request-github"
+  ],
+  "remoteUser": "devuser"
+}
+
