@@ -1,0 +1,32 @@
+name: CI/CD - Test and Build Docker Image for INSURANCE
+
+on:
+  [workflow_dispatch]
+
+jobs:
+  publish_images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4 #latest version
+        
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+          
+      - name: Install dependencies & Project recognization structure
+        run: |
+          python -m pip install --upgrade pip
+        # Either 'pip install -e .' because of (pyproject.toml) or 'pip install -r requirements.txt'  
+      
+      - name: Unit tests
+        run: |
+          pytest Tests/
+      
+      - name: build image
+        run: docker build ./Dockerfile/ -t partago/devops-nutritional-info-backend:latest . #Builds image we have to specify the directory where our docker file is 
+
+      - name: push image to docker hub 
+        run: |
+          docker push partago/devops-nutritional-info-backend:latest
