@@ -19,14 +19,19 @@ jobs:
         run: |
           python -m pip install --upgrade pip
         # Either 'pip install -e .' because of (pyproject.toml) or 'pip install -r requirements.txt'  
-      
+        #Team lets do pyproject.toml method its the modern choice
+
+        
       - name: Unit tests
         run: |
           pytest Tests/
       
       - name: build image
-        run: docker build ./Dockerfile/ -t partago/devops-nutritional-info-backend:latest . #Builds image we have to specify the directory where our docker file is 
-
+        run: |
+          docker build -t partago/devops-nutritional-info-backend:latest . 
+                 
+        
       - name: push image to docker hub 
         run: |
+          docker login -u partago -p ${{ secrets.DOCKER_HUB_TOKEN }}
           docker push partago/devops-nutritional-info-backend:latest
