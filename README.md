@@ -1,44 +1,79 @@
-Summarized process: (features -> bugfixes -> dev -> FINAL STAGE: main -> upload using Render.com) 
-# Git Branch Workflow and Collaboration Process
+# How Our Git Workflow Works — The Temporary Branch (“Meta”) Strategy Explained
 
-This project follows a structured branching model to ensure high-quality code and smooth collaboration among team members.
-
-## Branches and Their Purpose
-
-| Branch         | Purpose                                                     |
-|----------------|-------------------------------------------------------------|
-| `main`         | Production-ready code. Stable and fully tested.             |
-| `dev`          | Integration branch where all tested and approved changes are merged before production. |
-| `documentation`| For updating project documentation. Changes here must be reviewed first. |
-| `features`     | Branch for developing new features. Feature branches are created from here. |
-| `bugfixes`     | Branch for fixing bugs found in features or during integration. |
+Hey team! I want to share a quick explanation of how our Git branches work and why we use a temporary branch called `dev` for integration and testing before pushing to production.
 
 ---
 
-## Workflow Hierarchy
+## The Problem with Git and Staying Up to Date
 
-1. **Documentation**:  
-  GitHub has a feature called 'Wiki,' which you’ll see as one of the options whenever you design something and want to provide documentation for grading or to keep track of changes—just add it there.
+When you try to create a pull request (PR) into a branch (like `main`, `frontend`, or `backend`), Git checks if your branch is up to date with the target branch.
 
-3. **Features**:  
-   After documentation is reviewed and approved, new feature branches are created from the `features` branch. Features are developed and tested here. (Add the raw new code here!)
-
-4. **Bugfixes**:  
-   Once a feature is ready, it is merged into the `bugfixes` branch for thorough bug fixing and validation.
-
-5. **Dev**:  
-   After passing all bug fixes and quality checks, changes from `bugfixes` are merged into `dev` for final integration and team testing.
-
-6. **Main**:  
-   When `dev` is stable and tested, it is merged into `main` for production deployment.
+- If the target branch has new commits you don’t have, Git will ask you to update your branch (pull) before merging.
+- This can cause merge conflicts and slow us down, especially if branches have been diverging for a while.
 
 ---
 
-## Pull Request and Approval Process
+## Our Solution: The Temporary `dev` Branch
 
-- All merges to any branch require a Pull Request (PR).
-- Each PR requires **at least 3 team member approvals** before merging.
-- This process enforces code review and collaboration standards.
-- Branch protection rules are enabled to enforce these PR requirements.
+To avoid these conflicts and keep things simple:
 
+1. Every time we have a new batch of changes ready for testing, I create a **brand new `dev` branch** fresh from the current `main` branch.
 
+2. Then, I merge the latest shared `frontend` and `backend` branches into this new `dev` branch.
+
+3. We run all our unit tests and checks on this clean, temporary `dev` branch.
+
+4. Once everything passes, we merge `dev` into `main` for production.
+
+5. After that, we **delete the `dev` branch** — it disappears.
+
+6. Next time, we repeat: create a fresh `dev` from `main` and merge `frontend`/`backend` again.
+
+---
+
+## Why This Works
+
+- Because `dev` is brand new every time and starts exactly where `main` is, Git won’t ask you to stay up to date with `main` when you PR into `dev`.
+- This saves us from lots of unnecessary merge conflicts and update headaches.
+- Also, we never PR directly into `main` — only into `dev`, so `main` stays clean and stable.
+
+---
+
+## What This Means for You
+
+- You will have your own personal `frontend` and `backend` branches for your work.
+- Your personal branches will need to be **regularly updated by pulling** from the shared `frontend` and `backend` branches to avoid conflicts when making PRs.
+- But when you PR into the temporary `dev` branch (via `frontend`/`backend`), you won’t have to worry about staying up to date with `main` because `dev` is always fresh.
+- This keeps your PRs simpler and integration smoother.
+
+---
+
+## Summary
+
+| You Work On                        | PRs To                     | You Need To Keep Up To Date With         | Git Will Ask You To Stay Up To Date With          |
+|----------------------------------|----------------------------|------------------------------------------|---------------------------------------------------|
+| Personal branches (`frontend`/`backend`) | Shared `frontend`/`backend` branches | Shared `frontend`/`backend` branches         | Yes, regularly — to avoid conflicts                |
+| Shared `frontend`/`backend` branches       | Temporary `dev` branch              | — (freshly created from `main`)               | No, because `dev` is always fresh from `main`      |
+| Temporary `dev` branch                     | `main` branch                      | `main` branch                                  | Possibly, if `main` changes during testing         |
+
+---
+
+Feel free to ask me anytime if you want help updating your personal branches or if you’re confused about the flow!
+
+---
+
+# How to Keep Your Branch Updated (Using `git pull`)
+
+### Why keep your branch updated?
+
+Your personal `frontend` or `backend` branch is based on the shared `frontend`/`backend` branches. As others merge their changes, the shared branches move ahead. To avoid conflicts when you create a pull request (PR), you need to regularly update your branch with those latest changes.
+
+---
+
+### How to update your branch: Use `git pull`
+
+Before pushing your changes or creating a PR:
+
+- For `frontend` branch:
+  ```bash
+  git pull origin frontend
